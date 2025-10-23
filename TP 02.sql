@@ -76,6 +76,7 @@ INSERT INTO compo(id_art, id_bon, qte) VALUE
 (1, 1, 3),
 (5, 1, 4),
 (7, 1, 1);
+
 -- 3 Perceuses P1
 -- 4 Meuleuses 125mm
 -- 1 Perceuse à colonne
