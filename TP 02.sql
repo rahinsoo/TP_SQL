@@ -77,19 +77,5 @@ INSERT INTO compo(id_art, id_bon, qte) VALUE
 (5, 1, 4),
 (7, 1, 1);
 -- 3 Perceuses P1
-INSERT INTO bon() VALUE();
 -- 4 Meuleuses 125mm
-INSERT INTO bon() VALUE();
 -- 1 Perceuse à colonne
-INSERT INTO bon() VALUE();
-
-CREATE TABLE compo (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    id_art INT(11),
-    id_bon INT(11),
-    qte INT(11) NOT NULL
-);
-
-INSERT INTO fournisseur(id, nom) VALUES
-(1, 'Robin & Co'),
-(2, 'Hotton & Co');
