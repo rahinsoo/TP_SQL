@@ -1,6 +1,15 @@
 DROP DATABASE IF EXISTS compta; -- permet de réutiliser ce code sans devoir tout supprimer.
+
+----------------------------------
+--- création de Base de donnée ---
+----------------------------------
+
 CREATE DATABASE compta;
 USE compta;
+
+-------------------------
+--- création de table ---
+-------------------------
 
 CREATE TABLE fournisseur (
     ID int(11) PRIMARY KEY,
@@ -29,6 +38,10 @@ CREATE TABLE compo(
     ID_BON int(11),
     QTE int(11)
 );
+
+--------------------------
+--- création des Liens ---
+--------------------------
 
 ALTER TABLE article ADD CONSTRAINT FOREIGN KEY (ID_FOU) REFERENCES fournisseur(id);
 ALTER TABLE bon ADD CONSTRAINT FOREIGN KEY (ID_FOU) REFERENCES fournisseur(id);
