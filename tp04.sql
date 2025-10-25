@@ -182,6 +182,11 @@ WHERE a1.id_fou != a2.id_fou;
 -- b. Calculez les dépenses en commandes mois par mois (indice : utilisation des fonctions
 -- MONTH et YEAR)
 
+SELECT MONTH(bon.date_cmde) as mois, SUM(article.prix * compo.qte)
+FROM bon
+JOIN compo ON bon.id = compo.id_bon
+JOIN article ON article.id = compo.id_art
+GROUP BY MONTH(bon.date_cmde);
 
 -- c. Sélectionnez les bons de commandes sans article (indice : utilisation de EXISTS)
 
