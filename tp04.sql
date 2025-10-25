@@ -167,10 +167,26 @@ WHERE
     MONTH(bon.date_cmde) = 4;
 
 -- 3) Requêtes plus difficiles (facultatives) :
+
 -- a. Sélectionnez les articles qui ont une désignation identique mais des fournisseurs
 -- différents (indice : réaliser une auto-jointure i.e. de la table avec elle-même)
+SELECT 
+    a1.designation, 
+    a1.id_fou
+FROM article as a1
+JOIN article as a2 ON a1.designation = a2.designation
+WHERE a1.id_fou != a2.id_fou;
+
+-- j'ai une partie de la consigne, mais je pense devoir rajouter un élément.
+
 -- b. Calculez les dépenses en commandes mois par mois (indice : utilisation des fonctions
 -- MONTH et YEAR)
+
+
 -- c. Sélectionnez les bons de commandes sans article (indice : utilisation de EXISTS)
+
+
 -- d. Calculez le prix moyen des bons de commande par fournisseur.
+
+
 -- 4) Commitezetpushez!.
